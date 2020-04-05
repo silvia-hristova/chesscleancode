@@ -30,13 +30,13 @@ class Board
 {
 	Square square[8][8];
 	Color turn=WHITE;
-	bool moveKing(Square* thisKing, Square* thatSpace);
-	bool moveQueen(Square* thisQueen, Square* thatSpace);
-	bool moveBishop(Square* thisBishop, Square* thatSpace);
-	bool moveKnight(Square* thisKnight, Square* thatSpace);
-	bool moveRook(Square* thisRook, Square* thatSpace);
-	bool movePawn(Square* thisPawn, Square* thatSpace);
-	bool makeMove(int x1, int y1, int x2, int y2);
+	bool hasKingBeenMoved(Square* thisKing, Square* thatSpace);
+	bool hasQueenBeenMoved(Square* thisQueen, Square* thatSpace);
+	bool hasBishopBeenMoved(Square* thisBishop, Square* thatSpace);
+	bool hasKnightBeenMoved(Square* thisKnight, Square* thatSpace);
+	bool hasRookBeenMoved(Square* thisRook, Square* thatSpace);
+	bool hasPawnBeenMoved(Square* thisPawn, Square* thatSpace);
+	bool hasMoveBeenMade(int x1, int y1, int x2, int y2);
 	void printBoard();
 public:
 	Square* getSquare(int x, int y) {
@@ -45,9 +45,9 @@ public:
 	void setSquare(Square * s, int x, int y){
 		square[x][y]=*s;
 	}
-	bool doMove();
+	bool hasMoveBeenDone();
 	
 	void setBoard();
-	bool playGame();
+	bool hasGameBeenPlayed();
 };
 
