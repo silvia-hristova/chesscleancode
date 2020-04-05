@@ -37,6 +37,9 @@ class Board
 	bool hasRookBeenMoved(Square* thisRook, Square* thatSpace);
 	bool hasPawnBeenMoved(Square* thisPawn, Square* thatSpace);
 	bool hasMoveBeenMade(int x1, int y1, int x2, int y2);
+	void placePiecesOnSquare(Piece piece, Color color);
+	bool hasPieceBeenMoved(Square* src, Square* dest);
+	void drawBoard();
 	void printBoard();
 public:
 	Square* getSquare(int x, int y) {
