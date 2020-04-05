@@ -10,21 +10,21 @@ using namespace std;
 
 int main()
 {
-	Board b;
-	string s;
-	bool newgame = true;
+	Board chess;
+	string play;
+	bool newGame = true;
 	cout << "   _____ _    _ ______  _____ _____ \n  / ____| |  | |  ____|/ ____/ ____| \n | |    | |__| | |__  | (___| (___  \n | |    |  __  |  __|  \\___  \\___ \\ \n | |____| |  | | |____ ____) |___) | \n  \\_____|_|  |_|______|_____/_____/ \n" << endl;
 	cout << "A game by George Harter"<<endl;
 	cout << "Enter any key to continue" << endl;
-	cin >> s;
+	cin >> play;
 
-	while(newgame){
+	while(newGame){
 		b.setBoard();
-		while (b.playGame());
+		while (b.hasGameBeenPlayed());
 		cout << "Do you want to play again? (y for yes, anything else for no) ";
-		cin >> s;
-		if (s != "y")
-			newgame = false;
+		cin >> play;
+		if (play != "y")
+			newGame = false;
 	}
 
 
